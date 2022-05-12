@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<form name="Team Score" action ='' method="post" >
+    <select name="team-name">
+    {% for team in teams %}
+        <option value="{{ team.name }}">{{ team.name }}</option>
+    {% endfor %}
+     </select>
+     <p>
+        <label for="key">Key</label>
+        <input type="text" name="key"
+               placeholder="Enter the key">
+        </input>
+    </p>
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+</form>
+{% endblock %}

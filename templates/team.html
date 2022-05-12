@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <span class="title">
+        <h1>{% block title %} {{ team.name }}{% endblock %}</h1>
+    </span>
+    <div class="content">
+            <div class="student">
+                <p><b>#{{ team.id }}</b></p>
+                <b>
+                    <p class="name">{{ team.name }} </p>
+                </b>
+                <p>Member 1:{{ team.member1 }}</p>
+                <p>Member 2:{{ team.member2 }}</p>
+                <p>Member 3:{{ team.member3 }}</p>
+                <p>Member 4:{{ team.member4 }}</p>
+                <p>Member 5:{{ team.member5 }}</p>
+                <div class="bio">
+                    <table>
+                        <tr>
+                            <th style = "width: 20vw; text-align: left;">Stage</th>
+                            <th style = "width: 20vw; text-align: left;">Score</th>
+                        </tr>
+                        <tr>
+                            <td style = "width: 20vw; text-align:left;">{{ team.current_stage }}</td>
+                            <td style = "width: 20vw; text-align: left;">{{ team.score }}</td>
+                        </tr>  
+                    </table>
+                </div>
+            </div>
+    </div>
+{% endblock %}

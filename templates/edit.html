@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="width: 100%">
+        {% block title %} Edit {{ team.name }}
+        {% endblock %}
+    </h1>
+    <form method="post">
+        <p>
+            <label for="name">Name</label>
+            <input type="text" name="name"
+                   value={{ team.name }}
+                   placeholder="Team name">
+            </input>
+        </p>
+
+        <p>
+            <label for="member1">Member1</label>
+            <input type="text" name="member1"
+                   value={{ team.member1 }}
+                   placeholder="Enter Team member 1's name">
+            </input>
+        </p>
+
+        <p>
+            <label for="member1">Member2</label>
+            <input type="text" name="member2"
+                   value={{ team.member2 }}
+                   placeholder="Enter Team member 2's name">
+            </input>
+        </p>
+
+        <p>
+            <label for="member1">Member3</label>
+            <input type="text" name="member3"
+                   value={{ team.member3 }}
+                   placeholder="Enter Team member 3's name">
+            </input>
+        </p>
+
+        <p>
+            <label for="member1">Member4</label>
+            <input type="text" name="member4"
+                   value={{ team.member4 }}
+                   placeholder="Enter Team member 4's name">
+            </input>
+        </p>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+{% endblock %}

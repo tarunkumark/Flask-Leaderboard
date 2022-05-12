@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="title">{% block title %} Teams {% endblock %}</h1>
+    <div class="content">
+        <table >
+            <tr>
+                <th style = "width: 20vw;">Team ID</th>
+                <th style = "width: 20vw;">Team name</th>
+                <th style = "width: 20vw;">Score</th>
+                <th style = "width: 20vw;">Stage</th>
+              </tr>
+              {% for team in teams %}
+              <tr>
+                <td style = "width: 20vw; text-align: center;"><b>#{{ team.id }}</b></td>
+                <td style = "width: 30vw; text-align: center"><a href="{{ url_for('team', team_id=team.id)}}">
+                    {{ team.name }}
+                </a></td>
+                <td style = "width: 20vw; text-align: center">{{ team.score }}</td>
+                <td style = "width: 20vw; text-align: center">{{ team.current_stage }}</td>
+              </tr>
+              {% endfor %}
+            </table>
+    </div>
+{% endblock %}
